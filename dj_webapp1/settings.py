@@ -80,3 +80,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-STATIC_ROOT
+STATIC_ROOT = os.path.join(BASE_DIR, 'etc/static_collected')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'etc/static'),
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'etc/templates'),
+)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'etc/uploads')
